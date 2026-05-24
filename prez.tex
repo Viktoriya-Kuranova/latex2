@@ -1,0 +1,105 @@
+\documentclass{beamer}
+
+% Кодировка и языки
+\usepackage[T2A]{fontenc}        
+\usepackage[utf8]{inputenc}   
+\usepackage[russian]{babel}
+
+% Поля
+%\usepackage[left=25mm, right=15mm, top=20mm, bottom=20mm]{geometry} % Настройка полей
+
+% Для вставки изображений
+\usepackage{graphicx}
+
+% Математические символы
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{multirow}
+
+\title{Домашка}
+\author{Виктория}
+\date{\today}
+
+\usetheme{default}
+\usecolortheme{dove}
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+\begin{frame}{Содержание}
+ Темы:
+\begin{itemize}
+    \item Свойства несобственного интеграла.
+    \item Табличные интегралы.
+    \item Таблица полезных интегралов.
+    \item Список используемой учебной литературы.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Несобственные интегралы}
+
+\begin{block}{Первое свойство:}
+\begin{equation}
+\int_{a}^{\omega} f(x) \, dx = \int_{\alpha}^{\gamma} (f \circ \varphi)(t) \varphi'(t) \, dt  
+\end{equation}
+\end{block}
+
+\begin{block}{Второе свойство:}
+\begin{equation}
+\int_{a}^{\omega} (f \cdot g')(x) \, dx = (f \cdot g)(x)\big|_{a}^{\omega} - \int_{a}^{\omega} (f' \cdot g)(x) \, dx
+\end{equation}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Важные табличные интегралы}
+Интегралы тригонометрических функций:
+\begin{enumerate} 
+    \item \textbf{arcsin:} 
+   $$\int \frac{dx}{\sqrt{a^2 - x^2}} = \arcsin \frac{x}{a} + C, \quad |x| < |a|$$
+    \item \textbf{arctg:} 
+   $$\int \frac{dx}{a^2 + x^2} = \frac{1}{a} \operatorname{arctg} \frac{x}{a} + C$$
+    \item \textbf{ctg:} 
+    $$\int \frac{dx}{\sin^2 x} = -\operatorname{ctg} x + C$$
+    \item \textbf{tg:}
+    $$\int \frac{dx}{\cos^2 x} = \operatorname{tg} x + C$$
+\end{enumerate} 
+\end{frame}
+
+
+
+\begin{frame}{Таблица интегралов}
+Таблица полезных формул 
+
+\begin{table}
+\centering
+\small
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Название} & \textbf{Интеграл} & \textbf{Формула} \\
+\hline
+Формула Ньютона-Лейбница & $\int_{a}^{b} f(x)dx$ & $ \mathcal{F}(b) - \mathcal{F}(a)$ \\
+\hline
+Теорема о среднем & $\int_{a}^{b} f(x)dx$ & $ f(c)(b - a)$ \\
+\hline
+Формула Шаля & $\int_{a}^{b} f(x)dx$ & $ \int_{a}^{c} f(x)dx + \int_{c}^{b} f(x)dx$ \\
+\hline
+\end{tabular}
+\caption{Полезные формулы из разных разделов курса:}
+\end{table}
+\end{frame}
+
+
+\begin{frame}{Список литературы}
+При подготовке материалов использовалась следующая учебная литература:
+
+\begin{thebibliography}{1}
+\bibitem{zorich_slide}
+В.А.Зорич.
+\textit{Математический анализ. Часть 1}.
+\end{thebibliography}
+\end{frame}
+
+\end{document}
